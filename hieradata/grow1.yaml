@@ -12,8 +12,8 @@ nginx::nginx_vhosts:
 uwsgi::app:
   'hydro':
     ensure: 'present'
-    uid: 'vagrant'
-    gid: 'vagrant'
+    uid: 'grow'
+    gid: 'grow'
     config:
       socket: ':8080'
       processes: 1
