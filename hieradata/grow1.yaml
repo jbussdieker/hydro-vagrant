@@ -1,2 +1,22 @@
 classes:
  - grow
+ - uwsgi::app
+ - nginx
+ - python
+nginx::nginx_vhosts:
+  'hydro':
+    listen_port: '80'
+    location_custom_cfg:
+      uwsgi_pass: 127.0.0.1:8080
+      include: uwsgi_params
+uwsgi::app:
+  'hydro':
+    ensure: 'present'
+    uid: 'www-data'
+    gid: 'www-data'
+    config:
+      socket: ':8080'
+      processes: 1
+      wsgi-file: '/opt/grow/hydro/wsgi.py'
+      chdir: '/opt/grow'
+      plugins: python

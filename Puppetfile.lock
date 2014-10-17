@@ -1,8 +1,25 @@
 FORGE
   remote: https://forgeapi.puppetlabs.com
   specs:
+    jfryman-nginx (0.1.1)
+      puppetlabs-apt (>= 1.0.0)
+      puppetlabs-concat (>= 1.1.0)
+      puppetlabs-stdlib (>= 3.0.0)
+      ripienaar-module_data (>= 0.0.3)
+    puppetlabs-apt (1.6.0)
+      puppetlabs-stdlib (>= 2.2.1)
+    puppetlabs-concat (1.1.1)
+      puppetlabs-stdlib (< 5.0.0, >= 3.2.0)
+    puppetlabs-stdlib (4.3.2)
     puppetlabs-vcsrepo (1.1.0)
+    ripienaar-module_data (0.0.3)
+    stankevich-python (1.7.11)
+      puppetlabs-stdlib (>= 4.0.0)
+    zooz-uwsgi (0.0.1)
 
 DEPENDENCIES
+  jfryman-nginx (>= 0)
   puppetlabs-vcsrepo (>= 0)
+  stankevich-python (>= 0)
+  zooz-uwsgi (>= 0)
 
